@@ -1,0 +1,125 @@
+.root{
+    background: black;
+    
+}
+*{
+    margin: 0;
+    padding:0;
+
+}
+.hero1{
+    height: 11vh;
+    width: 100%; 
+    
+    background-color: #111; 
+     /* background-image: linear-gradient(rgba(77, 18, 18, 0.6),rgba(209, 89, 89, 0.6));   */
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-flow: row wrap;
+    padding-top: 15px;
+    padding-left: 3%; 
+    padding-right: 3%;
+  }
+  .c11{
+    font-family: 'Panchang', sans-serif;
+    font-weight: 700;
+    font-size:x-large;
+    color: rgb(218, 124, 25);
+    padding: 1px;
+  }
+  /* span{
+    color: #ea1538;
+  } */
+  nav ul li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+  }
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size:large;
+    font-weight: bold;
+  }
+  nav ul li a:hover{
+    color: #e57f13;
+    transition: .2s;
+  }
+  
+  .logo{
+    margin-right: 80px;
+     margin-left: 8px;
+    width:100px;
+    height:60px;
+  }
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../ImageFolder/logo11.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+ 
+.item{
+  text-decoration: none;
+  color:white;
+  right: 0;
+}
+.item:hover{
+  color:#e57f13;
+}
+
+.navbar-toggler-icon{
+  display: inline-block;
+  width: 1.8em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: #f9101070;
+
+}
+ 
+
+/* .navbar ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    list-style: none;
+}
+
+.navbar ul li a{
+    padding: 20px; 
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+.nav{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+} */
+
+
+
+/* .navbar>ul>li>a:hover{
+    color:orange;
+    font-size: large;
+}
+
+a:hover{
+    color:orange;
+} */
