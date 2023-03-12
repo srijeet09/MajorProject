@@ -1,13 +1,13 @@
-package com.srijeet;
+package com.evoting;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SrijeetSprbootCrudAppApplication2 {
+public class SprbootEvotingApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SrijeetSprbootCrudAppApplication2.class, args);
+		SpringApplication.run(SprbootEvotingApp.class, args);
 	}
 
 }

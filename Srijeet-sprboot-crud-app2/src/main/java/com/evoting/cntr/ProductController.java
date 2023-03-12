@@ -1,4 +1,4 @@
-package com.srijeet.cntr;
+package com.evoting.cntr;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.srijeet.model.Product;
-import com.srijeet.service.Service;
+import com.evoting.model.Product;
+import com.evoting.service.Service;
 
 @RestController
 public class ProductController {
