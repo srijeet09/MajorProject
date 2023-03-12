@@ -2,6 +2,12 @@ import "../CSSFiles/AdminLogin.css";
 import { Component, useState } from "react";
 import { Link, Navigate, redirect } from "react-router-dom";
 import { getttId } from "../JSFiles/services";
+<<<<<<< HEAD:Frontend/src/JSFiles/AdminLogin.js
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
+
+=======
+>>>>>>> c701c52b7767f4f2f2be9616d918377c784d31fb:Frontend3/src/JSFiles/AdminLogin.js
 export class AdminLogin extends Component {
   constructor() {
     super();

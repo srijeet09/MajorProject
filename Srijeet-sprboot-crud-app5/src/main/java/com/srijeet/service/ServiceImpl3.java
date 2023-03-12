@@ -1,14 +1,14 @@
-package com.srijeet.service;
+package com.evoting.service;
 
 	import java.util.ArrayList;
 	import java.util.List;
 	import java.util.Optional;
 	import org.springframework.beans.factory.annotation.Autowired;
 
-import com.srijeet.dao.ProductDao;
-import com.srijeet.dao.ProductDao3;
-import com.srijeet.model.Product3;
-import com.srijeet.model.product1;
+import com.evoting.dao.ProductDao;
+import com.evoting.dao.ProductDao3;
+import com.evoting.model.Product3;
+import com.evoting.model.product1;
 	
 	
 	@org.springframework.stereotype.Service

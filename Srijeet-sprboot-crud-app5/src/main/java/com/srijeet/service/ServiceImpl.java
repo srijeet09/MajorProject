@@ -1,4 +1,4 @@
-package com.srijeet.service;
+package com.evoting.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+<<<<<<<< HEAD:Srijeet-sprboot-crud-app2/src/main/java/com/evoting/service/ServiceImpl.java
+import com.evoting.dao.ProductDao;
+import com.evoting.model.Product;
+========
 import com.srijeet.dao.ProductDao;
 import com.srijeet.model.Product;
 import com.srijeet.model.product1;
+>>>>>>>> c701c52b7767f4f2f2be9616d918377c784d31fb:Srijeet-sprboot-crud-app5/src/main/java/com/srijeet/service/ServiceImpl.java
 @org.springframework.stereotype.Service
 public class ServiceImpl implements Service {
 	@Autowired

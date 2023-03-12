@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import "../CSSFiles/AdminReg.css";
 import { sendData2 } from "../JSFiles/services";
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
 
 export function AdminReg() {
   const [name, setname] = useState("");

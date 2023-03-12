@@ -8,7 +8,11 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
+<<<<<<< HEAD:Frontend/package.json
+    "mdb-ui-kit": "^6.2.0",
+=======
     "crypto-js": "^4.1.1",
+>>>>>>> c701c52b7767f4f2f2be9616d918377c784d31fb:Frontend3/package.json
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",

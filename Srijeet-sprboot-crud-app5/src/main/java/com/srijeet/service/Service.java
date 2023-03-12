@@ -1,8 +1,8 @@
-package com.srijeet.service;
+package com.evoting.service;
 
 import java.util.List;
 
-import com.srijeet.model.Product;
+import com.evoting.model.Product;
 
 public interface Service {
 void add(Product product);

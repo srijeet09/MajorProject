@@ -8,8 +8,8 @@
 		<version>2.7.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.srijeet</groupId>
-	<artifactId>Srijeet-sprboot-crud-app2</artifactId>
+	<groupId>com.evoting</groupId>
+	<artifactId>sprboot-evoting-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Srijeet-sprboot-crud-app2</name>
 	<description>Demo project for Spring Boot</description>

@@ -1,4 +1,4 @@
-package com.srijeet.model;
+package com.evoting.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
