@@ -1,0 +1,28 @@
+.copy{
+    background-color:black;
+    color: white;
+    height: fit-content;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;border:none;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    background-image: url("../ImageFolder/footer.webp");
+    background-position: cover;
+}
+
+.hero{
+    position:sticky;
+    bottom: 0;
+    padding: 0px 0px 0px 0px;
+   width: 100%;
+   
+   
+   
+}
