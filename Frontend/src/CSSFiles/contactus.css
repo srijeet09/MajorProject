@@ -1,5 +1,5 @@
 body {
-    background-image: url("../ImageFolder/voter.png");
+    background-image: url("../ImageFolder/Contact.jpg");
     background-size: cover;
   }
   
@@ -28,7 +28,7 @@ body {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(188, 124, 29, 0.7);
+    background-color: rgba(10, 67, 133, 0.7);
     width: 80%;
   }
   /* button{

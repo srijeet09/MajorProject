@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import com.Voting.model.Candidates;
 import com.Voting.model.Voted;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 @Repository
 	public interface VotedDao extends JpaRepository<Voted,Integer> {
 		public List<Voted> findByAdmin(String Name);

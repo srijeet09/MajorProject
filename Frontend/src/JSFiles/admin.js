@@ -13,10 +13,11 @@ import {
 } from "../JSFiles/services";
 import "../CSSFiles/admins.css";
 import { Link, Navigate } from "react-router-dom";
-import { PieChart } from "react-minimal-pie-chart";
+
 let flag = false;
 let flag2 = false;
 let c = "";
+let c1 = "";
 let p1 = [];
 export class Admin extends Component {
   constructor() {
@@ -34,13 +35,14 @@ export class Admin extends Component {
 
   componentDidMount = async () => {
     c = sessionStorage.getItem("name");
+    c1 = sessionStorage.getItem("ed");
     const p = {
       id: this.state.id,
       votes: this.state.votes,
       name: this.state.name,
       admin: c,
     };
-    if (c != null) {
+    if (c != null && c1 != null) {
       const response1 = await getData11(p);
       console.log(response1.data);
       this.setState({ allname: response1.data });
@@ -153,6 +155,7 @@ export class Admin extends Component {
   LogOut = () => {
     this.setState({ redirect: "/login" });
     sessionStorage.removeItem("name");
+    sessionStorage.removeItem("ed");
     c = null;
   };
 
@@ -164,21 +167,23 @@ export class Admin extends Component {
             <div id="him1">
               <div>
                 <h1>
-                  Hi <strong>{c}</strong> Good to see you again
+                  Hi <strong className="bg-success">{c}</strong>,  Good to see you again!
                 </h1>
                 <br></br>
-                <h3>To Add No of Candidates:</h3>
+                <h3 className="bg-warning">To Add No of Candidates:</h3>
                 <br></br>
                 <input
                   name="name"
+                  className="border border-primary"
                   type="text"
                   placeholder="Enter name"
                   id="name"
+                  
                   value={this.state.name}
                   required
                   onChange={this.namer}
                 />
-                <button class="butter" onClick={this.aad}>
+                <button class="btn btn-primary ms-2 fs-5 mb-3 " onClick={this.aad}>
                   Add Candidates
                 </button>
               </div>
@@ -193,7 +198,7 @@ export class Admin extends Component {
                     <td>{user.name}</td>
                     <td>
                       <button
-                        class="butter"
+                        className="btn btn-danger"
                         onClick={this.delete1}
                         value={user.id}
                       >
@@ -202,7 +207,7 @@ export class Admin extends Component {
                     </td>
                     <td>
                       <button
-                        class="butter"
+                        className="btn btn-info"
                         onClick={this.edit1}
                         value={user.id}
                       >

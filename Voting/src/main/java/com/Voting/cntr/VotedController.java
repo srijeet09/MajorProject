@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 	import org.springframework.web.bind.annotation.RestController;
 
 import com.Voting.model.Voted;
-import com.Voting.model.Voter;
-import com.Voting.service.CandidatesService;
+import com.Voting.model.Voters;
+import com.Voting.service.VotersService;
 import com.Voting.service.VotedServ;
 
 	@RestController

@@ -3,7 +3,7 @@ package com.Voting.service;
 import java.util.List;
 
 import com.Voting.model.Voted;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 
 
 

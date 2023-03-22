@@ -47,15 +47,15 @@ export function AdminReg() {
     var valid = true;
     e.preventDefault();
 
-    // name check
+    // org name check
     if (!name == "") {
       const fname = /^[a-zA-Z ]+$/;
       if (name.match(fname)) {
-        if (name.length > 3) {
+        if (name.length > 2) {
           setnameError("");
         } else {
           valid = false;
-          setnameError("*Name must have more than 3 characters");
+          setnameError("*Name must have more than 2 characters");
         }
       } else {
         valid = false;
@@ -66,7 +66,7 @@ export function AdminReg() {
       setnameError("*Please enter your name");
     }
 
-    //organization name check
+    //organization id check
     if (!org == 0) {
       const orgname = /^[0-9]{1,}$/;
       if (org.match(orgname)) {
@@ -84,7 +84,7 @@ export function AdminReg() {
     if (!email == "") {
       //check valid email
       const emailRegex =
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        /^[a-zA-Z.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       if (emailRegex.test(email)) {
         setEmailError("");
       } else {
@@ -112,7 +112,7 @@ export function AdminReg() {
       }
     } else {
       valid = false;
-      setSecurityError("*Please enter your pet dog's name");
+      setSecurityError("*Please enter your favourite color name");
     }
 
     // password check
@@ -154,19 +154,21 @@ export function AdminReg() {
   return (
     <div class="main">
       <form class="regForm" onSubmit={handleSubmit}>
-        <div class="Create">CREATE ACCOUNT</div>
+        <div className="bg-primary fs-4">REGISTRATION</div>
 
         <div class="first">
-          <b>Name</b>
+          <b>Organisation Name</b>
           <br />
+         
           <input
             type="text"
-            id="name"
-            placeholder="Enter your name"
+            className="name"
+            placeholder="Enter your org name"
             onChange={handlename}
             value={name}
           />
           {nameError && <div className="error-msg">{nameError}</div>}
+        
         </div>
         <br></br>
 
@@ -227,7 +229,7 @@ export function AdminReg() {
         <br></br>
 
         <div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-success">
             Create Account
           </button>
           {redirect ? <Navigate to={redirect} /> : null}

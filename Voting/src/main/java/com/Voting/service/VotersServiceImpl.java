@@ -10,22 +10,22 @@ package com.Voting.service;
 	import org.springframework.beans.factory.annotation.Autowired;
 
 import com.Voting.dao.CandidatesDao;
-import com.Voting.dao.VoterDao;
-import com.Voting.model.Voter;
+import com.Voting.dao.VotersDao;
+import com.Voting.model.Voters;
 	@org.springframework.stereotype.Service
-	public class VotersServiceImpl implements CandidatesService {
+	public class VotersServiceImpl implements VotersService {
 		@Autowired
-		private VoterDao productDao;
+		private VotersDao productDao;
 	 	
 		@Override
-		public void add(Voter product) {
+		public void add(Voters product) {
 			productDao.save(product);
 		}
 
 	 	@Override
-		public List<Voter> findByAdmin(String a) {
-			Iterable<Voter> itr = productDao.findByAdmin(a);
-			List<Voter> lst = new ArrayList<>();
+		public List<Voters> findByAdmin(String a) {
+			Iterable<Voters> itr = productDao.findByAdmin(a);
+			List<Voters> lst = new ArrayList<>();
 			itr.forEach(ele->lst.add(ele));
 			return lst;
 }
@@ -48,13 +48,13 @@ import com.Voting.model.Voter;
 			
 		}
 	 	@Override
-		public void modify(Voter product) {
+		public void modify(Voters product) {
 			productDao.save(product);
 			
 		}
 	 	@Override
-		public Voter getById(int id,String admin) {
-			 Optional<Voter> opt = productDao.findById(id,admin);
+		public Voters getById(int id,String admin) {
+			 Optional<Voters> opt = productDao.findById(id,admin);
 			 if(opt.isPresent()) {
 				 return opt.get();
 			 }

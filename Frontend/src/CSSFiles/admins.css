@@ -41,7 +41,7 @@ td,th{
 }
 #ram{
     
-    background-image: url('../ImageFolder/logo11.png');
+    /* background-image: url('../ImageFolder/logo11.png'); */
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw;

@@ -4,7 +4,7 @@
 	import java.util.List;
 
 import com.Voting.model.Admin;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 	
 
 	public interface AdminService {

@@ -45,8 +45,8 @@ export class VoterLogin extends Component {
         response.data.id == this.state.id &&
         response.data.admin == this.state.admin
       ) {
-        sessionStorage.setItem("id", this.state.id);
-        sessionStorage.setItem("name", this.state.admin);
+        sessionStorage.setItem("Vid", this.state.id);
+        sessionStorage.setItem("Vname", this.state.admin);
         this.setState({ redirect: "/User" });
       } else {
         alert("Enter correct values");

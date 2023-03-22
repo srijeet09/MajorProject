@@ -10,7 +10,7 @@ import com.Voting.dao.FeedbackDao;
 import com.Voting.dao.CandidatesDao;
 import com.Voting.model.Feedback;
 import com.Voting.model.Candidates;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 @org.springframework.stereotype.Service
 public class FeedService implements FeedServ {
 	@Autowired

@@ -39,6 +39,7 @@ export class AdminLogin extends Component {
         originalText == this.state.password
       ) {
         sessionStorage.setItem("name", `${response.data.name}`);
+        sessionStorage.setItem("ed", `${response.data.id}`);
         alert(`Hi ${response.data.name} Welcome to the Admin page`);
         this.setState({ redirect: "/admin" });
       } else if (
@@ -62,9 +63,9 @@ export class AdminLogin extends Component {
     return (
       <div className="div2">
         <form className="loginForm">
-          <div class="Login">ADMIN LOGIN</div>
+          <div className="bg-primary fs-4">ADMIN LOGIN</div>
 
-          <div>
+          <div className="mt-5">
             <label>Admin Id</label>
             <br></br>
             <input
@@ -121,11 +122,11 @@ export class AdminLogin extends Component {
           </div>
           <br></br>
 
-          <div class="Create">
+          <div className="fs-5">
             <Link to="/reg">
-              <span>
+              <button className="btn btn-success">
                 <b>Create Account</b>
-              </span>
+              </button>
             </Link>
           </div>
         </form>

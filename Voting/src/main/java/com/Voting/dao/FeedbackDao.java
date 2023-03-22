@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.Voting.model.Feedback;
 import com.Voting.model.Candidates;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 @Repository
 public interface FeedbackDao extends JpaRepository<Feedback, Integer> {
 }

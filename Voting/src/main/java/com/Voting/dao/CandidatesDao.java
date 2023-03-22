@@ -12,7 +12,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.Voting.model.Candidates;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 @Repository
 public interface CandidatesDao extends JpaRepository<Candidates, Integer> {
 public List<Candidates> findByAdmin(String Name);

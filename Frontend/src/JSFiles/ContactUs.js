@@ -138,30 +138,34 @@ export class ContactUs extends Component {
             <label id="name1" name="name">
               Enter your Name
             </label>
+            <div className="col-auto">
             <input
               type="text"
-              id="name"
+              className="form-control"
               placeholder="Enter Name"
               name="name"
               required
-              pattern="[a-zA-Z]+"
+              pattern="[a-zA-Z ]+"
               minlength="3"
-              maxlength="10"
+              maxlength="20"
               onChange={this.name}
             />
+            </div>
             <br />
             <lable id="ema1" name="ema">
               Enter your Email
             </lable>
+            <div className="col-auto">
             <input
               type="email"
-              id="ema"
+              className="form-control"
               name="email"
               placeholder="Enter Email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
               onChange={this.email}
             />
+            </div>
             <br />
             Select your query:
             <select
@@ -183,13 +187,13 @@ export class ContactUs extends Component {
               </option>
             </select>
             <br />
-            <button id="hello" onClick={this.Submit}>
+            <button className="btn btn-warning btn-lg mt-2" onClick={this.Submit}>
               Submit
             </button>
             <br />
             We will shortly get in touch with you.
           </div>
-          <button onClick={this.Directions}>Directions</button>
+          <button onClick={this.Directions} className="btn btn-success btn-lg mt-4">Directions</button>
           {flag ? (
             <>
               <div class="map">

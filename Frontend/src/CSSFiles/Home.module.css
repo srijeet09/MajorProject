@@ -8,6 +8,7 @@
   justify-content: space-around;
   
   background-image: url("../ImageFolder/1.jpg");
+  
 
   background-size: cover;
   height: 85vh;
@@ -35,7 +36,7 @@
   font-family: "Roboto", sans-serif;
  font-size: small;
  font-weight: lighter;
-  color: #998787;
+  color: #878a99;
   text-align: center;
   transition: all 0.2s;
   cursor: pointer;
@@ -45,4 +46,5 @@ button:hover {
   
   color: #000000;
   background-color: #d68383;
+  transition: all 0.5s;
 }

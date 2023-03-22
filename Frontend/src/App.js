@@ -10,7 +10,7 @@ import "./CSSFiles/App.css";
 import { ContactUs } from "./JSFiles/ContactUs";
 import { Admin } from "./JSFiles/admin";
 import { Users } from "./JSFiles/user";
-import { Japoo, VoterLogin } from "./JSFiles/VoterLogin";
+import { VoterLogin } from "./JSFiles/VoterLogin";
 import { AboutUs } from "./JSFiles/AboutUs";
 import { VoterId } from "./JSFiles/VoterId";
 

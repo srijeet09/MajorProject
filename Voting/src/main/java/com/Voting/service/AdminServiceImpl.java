@@ -8,7 +8,7 @@ package com.Voting.service;
 import com.Voting.dao.CandidatesDao;
 import com.Voting.dao.AdminDao;
 import com.Voting.model.Admin;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 	
 	
 	@org.springframework.stereotype.Service

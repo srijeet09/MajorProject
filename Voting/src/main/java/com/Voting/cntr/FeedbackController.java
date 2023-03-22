@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.Voting.model.Feedback;
 import com.Voting.model.Candidates;
 import com.Voting.service.FeedServ;
-import com.Voting.service.VoterService;
+import com.Voting.service.CandidateService;
 
 @RestController
 public class FeedbackController {

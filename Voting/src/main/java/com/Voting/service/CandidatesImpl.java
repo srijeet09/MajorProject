@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.Voting.dao.CandidatesDao;
 import com.Voting.model.Candidates;
-import com.Voting.model.Voter;
+import com.Voting.model.Voters;
 @org.springframework.stereotype.Service
-public class CandidatesImpl implements VoterService {
+public class CandidatesImpl implements CandidateService {
 	@Autowired
 	private CandidatesDao productdao;
  	@Override
