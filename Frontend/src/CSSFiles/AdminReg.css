@@ -3,21 +3,24 @@
 }
 
 .main {
-    height: 80vh;
-    background-image: url('../ImageFolder/logo11.png');
+    
+    background-image: url('../ImageFolder/vote.jpg');
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    background-position:center;
+    -webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+    
 }
 
 .regForm {
     text-align: center;
     font-size: medium;
-    /* margin: 10%, 10%, 30%; */
-
-
     border-radius: 15px;
+    color: white;
+    font-weight: bolder;
 }
-
 .Create {
     font-size: x-large;
     font-weight: 500;
@@ -26,11 +29,12 @@
 }
 
 input {
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 10px 0 0 0;
     padding: 10px;
-    background-color: rgb(210, 228, 160);
+    background-color: rgb(255, 255, 255);
     text-align: center;
+    width:20%;
 }
 
 .button {
@@ -46,3 +50,5 @@ input {
     color: rgb(83, 70, 70);
     letter-spacing: 1px;
 }
+
+

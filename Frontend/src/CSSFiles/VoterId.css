@@ -1,17 +1,18 @@
 #ram{
-    height: 80vh;
-    background-image: url('../ImageFolder/logo11.png');
-    background-size: cover;
-    height: 100vh;
-}
-#Shyam{
-
+    width: 100%;
     display:flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    align-items: center;
-    background-color: black;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center;
+    margin:auto;
+    align-items:center;
+}
+#Shyam1{
+    
+    /* background-image: url('../ImageFolder/voters1.jpg'); */
+    background-size: cover;
+    min-height: 100vh; 
+    height: auto; 
 }
 
 .butter{
@@ -19,4 +20,8 @@
     width:80px;
     height: 40px;
     font-size: small;
+}
+
+#him2{
+    background-color: rgba(10, 2, 2, 0.5);
 }

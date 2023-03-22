@@ -2,8 +2,9 @@
     margin-top: 0%;
     height: 100vh;
     width: 100vw;
-    background-image: url('../ImageFolder/logo11.png');
+    background-image: url('../ImageFolder/voter.png');
     background-size: cover;
+    
 }
 .error-msg {
     color: red;
@@ -13,6 +14,8 @@
 .loginForm {
     text-align: center;
     font-size: medium;
+    color: black;
+    font-weight: bolder;
     /* margin: 5% 10% 30%; */
 
 
@@ -47,4 +50,7 @@ input {
     cursor: pointer;
     color: rgb(37, 29, 29);
     letter-spacing: 1px;
+}
+.Create{
+    color: chocolate;
 }

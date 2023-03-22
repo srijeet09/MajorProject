@@ -14,7 +14,7 @@ function Footer() {
     </header>
     <div class="hero">
     <footer class="copy">
-    <p>© E-MANDATE.com, Inc. All rights reserved.</p>
+    <p>© E-VOTING, Inc. All rights reserved.</p>
    </footer>
   </div>
     

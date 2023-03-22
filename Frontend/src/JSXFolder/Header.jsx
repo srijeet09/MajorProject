@@ -6,19 +6,22 @@ import '../CSSFiles/Header.css'
 function Header() {
   return (
     <>
-    <Navbar bg="dark" expand="lg">
-    <Container>
+    <Navbar bg="dark" expand="lg" style={{position: "sticky",
+top:"0"}}>
+    <div className='container-fluid' id="maker">
+      
       <Navbar.Brand><Link to="/"><img src={require("../ImageFolder/logo11.png")} alt="" className='logo'></img></Link></Navbar.Brand>
-      <Navbar.Brand><h2 className="c11">E-MANDATE</h2></Navbar.Brand>
+      <Navbar.Brand><h2 className="c11">E-Voting</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
+        <Nav>
           <Nav.Link><Link to="/"  className="item">Home</Link></Nav.Link>
           <Nav.Link><Link to="/contactus" className="item">Contact</Link></Nav.Link>
           <Nav.Link><Link to="/aboutus" className="item">About us</Link></Nav.Link>
         </Nav>
       </Navbar.Collapse>
-    </Container>
+      
+      </div>
   </Navbar>
     <header>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"></link>

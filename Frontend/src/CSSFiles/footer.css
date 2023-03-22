@@ -13,10 +13,13 @@
     text-align: center;
     justify-content: center;
     vertical-align: middle;
+    background-image: url("../ImageFolder/footer.webp");
+    background-position: cover;
 }
 
 .hero{
-    position:static;
+    position:sticky;
+    bottom: 0;
     padding: 0px 0px 0px 0px;
    width: 100%;
    

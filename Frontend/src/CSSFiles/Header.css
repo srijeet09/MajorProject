@@ -27,7 +27,7 @@
     font-family: 'Panchang', sans-serif;
     font-weight: 700;
     font-size:x-large;
-    color: rgb(218, 124, 25);
+    color: rgb(28, 218, 25);
     padding: 1px;
   }
   /* span{
@@ -69,6 +69,7 @@ main{
   text-decoration: none;
   color:white;
   right: 0;
+  align-items:right;
 }
 .item:hover{
   color:#e57f13;
@@ -86,6 +87,12 @@ main{
   background-color: #f9101070;
 
 }
+.navbar-expand-lg {
+  flex-direction: row;
+  right: 0;
+  position: absolute;
+}
+
  
 
 /* .navbar ul{
@@ -123,3 +130,9 @@ main{
 a:hover{
     color:orange;
 } */
+
+.navbar .navbar-expand-lg .navbar-light .bg-dark{
+position: sticky;
+top:0;
+}
+

@@ -1,19 +1,34 @@
 import { Component } from "react";
-import { deleteId, getData1, sendData3 } from "./services";
-
+import { Navigate } from "react-router-dom";
+import { deletedId, deleteId, getData1, sendData3, senddId } from "./services";
+import { Link } from "react-router-dom";
+import "../CSSFiles/VoterId.css";
+let c = "";
 export class VoterId extends Component {
   constructor() {
     super();
     this.state = {
       id: "",
+      admin: "",
       allid: [],
+      redirect: "",
     };
   }
 
   componentDidMount = async () => {
-    const response1 = await getData1();
-    console.log(response1.data);
-    this.setState({ allid: response1.data });
+    c = sessionStorage.getItem("name");
+    const p = {
+      id: this.state.id,
+      admin: c,
+    };
+    if (c != null) {
+      const response1 = await getData1(p);
+      console.log(response1.data);
+      this.setState({ allid: response1.data });
+      this.setState({ admin: c });
+    } else {
+      this.setState({ redirect: "/login" });
+    }
   };
 
   hello = (event) => {
@@ -21,11 +36,15 @@ export class VoterId extends Component {
   };
 
   add = async () => {
-    const a = /^[0-9]{1,}$/;
+    const a = /^[0-9]{1,12}$/;
     if (this.state.id > 0 && this.state.id.match(a)) {
       const response = await sendData3(this.state);
       console.log(response.data);
-      const response1 = await getData1();
+      const p = {
+        id: this.state.id,
+        admin: c,
+      };
+      const response1 = await getData1(p);
       this.setState({ allid: response1.data });
       this.setState({ id: "" });
     } else {
@@ -35,31 +54,46 @@ export class VoterId extends Component {
   };
   delete1 = async (e) => {
     const a = e.target.value;
-    const response = await deleteId(a);
+    const p1 = {
+      id: a,
+      admin: c,
+    };
+    const response = await deletedId(p1);
     console.log(response.data);
-    const response1 = await getData1();
+    const p = {
+      id: this.state.id,
+      admin: c,
+    };
+    const response1 = await getData1(p);
     this.setState({ allid: response1.data });
   };
   render() {
     return (
       <>
-        <div id="Shyam">
+        <div id="Shyam1">
           <div id="ram">
-            <label>
-              <h1>Add Voters</h1>
+            <div>
+              <h1>
+                Hi <strong className="bg-success">{c}</strong>,  Good to see you again!
+              </h1>
               <br></br>
-              <input
-                name="id"
-                value={this.state.id}
-                onChange={this.hello}
-              ></input>
-            </label>
-            <br></br>
-            <br></br>
-            <button class="butter" onClick={this.add}>
-              Add
-            </button>
-
+              <label>
+                <h1 className="bg-warning">Add Voters</h1>
+                <br></br>
+                <input
+                  name="id"
+                  className="form-control border-4"
+                  placeholder="Enter here"
+                  value={this.state.id}
+                  onChange={this.hello}
+                ></input>
+              </label>
+              <br></br>
+              <br></br>
+              <button className="btn btn-primary" onClick={this.add}>
+                Add
+              </button>
+            </div>
             <div id="him1">
               <table id="him2">
                 <tr>
@@ -71,7 +105,7 @@ export class VoterId extends Component {
                     <td>{user.id}</td>
                     <td>
                       <button
-                        class="butter"
+                        className="btn btn-danger"
                         onClick={this.delete1}
                         value={user.id}
                       >
@@ -85,6 +119,8 @@ export class VoterId extends Component {
             </div>
           </div>
         </div>
+        {c === null ? <Navigate to={this.state.redirect} /> : null}
+        <Link to = "/admin"><button className="btn btn-primary fs-5">Back</button></Link>
       </>
     );
   }

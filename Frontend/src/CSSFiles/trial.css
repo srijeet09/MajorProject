@@ -1,5 +1,5 @@
 #oper{
-    background-image: url('../ImageFolder/1.jpg');
+    background-image: url('../ImageFolder/User.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,8 +17,8 @@ align-items: center;
 margin: auto;
 }
 #lo{
-background-color: rgb(255, 255, 255,0.5);
-border: 2px solid brown;
+background-color: rgba(186, 118, 41, 0.5);
+border: 2px solid rgb(0, 0, 0);
 border-radius: 4px;
 display: flex;
 flex-direction: column;
@@ -30,12 +30,21 @@ height:25%;
 }
 #btn{
     margin-top: 15px;
-    background-color: bisque;
+    background-color: rgba(255, 228, 196);
     color: black;
-    width: 75px;
-    height: 25px;
+    width: 25%;
+    height: 20%;
+    font-size: 1rem;
 }
 #inp{
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255,0.85);
+    width:50%;
+    height: 25%;
+    margin:1%;
 }
+
+#btn:hover{
+    background-color: rgb(59, 215, 20); 
+}
+

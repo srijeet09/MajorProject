@@ -2,20 +2,24 @@ import "../CSSFiles/AdminLogin.css";
 import { Component, useState } from "react";
 import { Link, Navigate, redirect } from "react-router-dom";
 import { getttId } from "../JSFiles/services";
-
 export class AdminLogin extends Component {
   constructor() {
     super();
     this.state = {
       email: null,
       password: "",
+      security: "",
       redirect: null,
+      c: false,
     };
   }
   handle = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
   handle1 = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  handle3 = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
   haSubmit = async (e) => {
@@ -25,12 +29,24 @@ export class AdminLogin extends Component {
       const response = await getttId(this.state.email);
       console.log(response.data.id, response.data.password);
       console.log(response.data);
+      const CryptoJS = require("crypto-js");
+      var key = "12345";
+      var bytes = CryptoJS.AES.decrypt(response.data.password, key);
+      var originalText = bytes.toString(CryptoJS.enc.Utf8);
+      console.log(originalText);
       if (
         response.data.id == this.state.email &&
-        response.data.password == this.state.password
+        originalText == this.state.password
       ) {
-        this.setState({ redirect: "/admin" });
+        sessionStorage.setItem("name", `${response.data.name}`);
+        sessionStorage.setItem("ed", `${response.data.id}`);
         alert(`Hi ${response.data.name} Welcome to the Admin page`);
+        this.setState({ redirect: "/admin" });
+      } else if (
+        response.data.id == this.state.email &&
+        response.data.security == this.state.security
+      ) {
+        alert(`Hi ${response.data.name} your password is ${originalText}`);
       } else {
         alert("Enter Valid Credentials");
       }
@@ -38,13 +54,18 @@ export class AdminLogin extends Component {
       alert("id will only be numeric");
     }
   };
+
+  haClicked = (e) => {
+    e.preventDefault();
+    this.setState({ c: true });
+  };
   render() {
     return (
       <div className="div2">
         <form className="loginForm">
-          <div class="Login">ADMIN LOGIN</div>
+          <div className="bg-primary fs-4">ADMIN LOGIN</div>
 
-          <div>
+          <div className="mt-5">
             <label>Admin Id</label>
             <br></br>
             <input
@@ -62,7 +83,7 @@ export class AdminLogin extends Component {
             <label>Admin Password</label>
             <br></br>
             <input
-              type="text"
+              type="password"
               id="password1"
               placeholder="Enter your Password"
               name="password"
@@ -71,19 +92,41 @@ export class AdminLogin extends Component {
             />
           </div>
           <br></br>
-
+          {this.state.c ? (
+            <>
+              <div>
+                <label>What is Your favourite color?</label>
+                <br></br>
+                <input
+                  type="text"
+                  id="password1"
+                  placeholder="Security Question"
+                  name="security"
+                  value={this.state.security}
+                  onChange={this.handle3}
+                />
+              </div>
+              <br></br>
+            </>
+          ) : null}
           <div>
-            <button class="sub-btn" onClick={this.haSubmit}>
+            <button class="sub-btn btn btn-primary" onClick={this.haSubmit}>
               Submit
+            </button>
+            <button
+              class="sub-btn btn btn-warning ms-1"
+              onClick={this.haClicked}
+            >
+              Forgot Password
             </button>
           </div>
           <br></br>
 
-          <div class="Create">
+          <div className="fs-5">
             <Link to="/reg">
-              <span>
+              <button className="btn btn-success">
                 <b>Create Account</b>
-              </span>
+              </button>
             </Link>
           </div>
         </form>

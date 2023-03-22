@@ -10,7 +10,7 @@ import "./CSSFiles/App.css";
 import { ContactUs } from "./JSFiles/ContactUs";
 import { Admin } from "./JSFiles/admin";
 import { Users } from "./JSFiles/user";
-import { Japoo } from "./JSFiles/trial";
+import { VoterLogin } from "./JSFiles/VoterLogin";
 import { AboutUs } from "./JSFiles/AboutUs";
 import { VoterId } from "./JSFiles/VoterId";
 
@@ -20,7 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home></Home>} />
-        <Route exact path="/Form" element={<Japoo />} />
+        <Route exact path="/Form" element={<VoterLogin />} />
         <Route exact path="/login" element={<AdminLogin />} />
         <Route exact path="/reg" element={<AdminReg />} />
         <Route exact path="/contactus" element={<ContactUs />} />
